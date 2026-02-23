@@ -6,7 +6,7 @@ I'm building a website for Consultation website for those who provide Consultati
 ## 📋 Development Checklist
 
 ### Phase 1: Planning & Branding 
-- [ ] Finalize Demo Name (e.g., Nova Business Strategy, Apex Growth).
+- [X] Finalize Demo Name : GrowthMatrix
 - [ ] Lock in Color Palette (Navy Blue, Crisp White, Gold/Green accent).
 - [ ] Select Fonts (Bold Serif for headings, clean Sans-Serif for body text).
 - [ ] Gather high-quality stock images and placeholder company logos.
