@@ -54,3 +54,17 @@ The **GrowthMatrix** demo utilizes the "Executive Look" theme. This palette is d
 * **Dark Slate:** `#3A4A5A` (Use for secondary text or footer sections)
 * **Charcoal Black:** `#42474A` (Use for primary headings and base backgrounds)
 * **Crisp White:** `#FFFFFF` (Use for clean section backgrounds and high-contrast text)
+
+### Typography
+
+The typography pairs a bold, authoritative Serif font for headings with a highly legible, clean Sans-Serif for the body text. This creates a high-end, classic consulting vibe while maintaining modern web readability.
+
+* **Primary Font (Headings):** `Playfair Display` (Serif) - Used for Hero text, section titles, and strong calls to action.
+* **Secondary Font (Body Text):** `Inter` (Sans-Serif) - Used for paragraphs, descriptions, and UI elements.
+
+### Google Fonts Import (Add to `index.html`)
+```html
+<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+<link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap)" rel="stylesheet">
+```
