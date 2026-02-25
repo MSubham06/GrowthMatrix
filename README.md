@@ -68,3 +68,11 @@ The typography pairs a bold, authoritative Serif font for headings with a highly
 <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
 <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap)" rel="stylesheet">
 ```
+
+### 🖼️ Required Media Assets
+
+- [ ] **1x Hero Background Image:** High-quality photo of a modern office, boardroom, or corporate setting.
+- [ ] **4-5x Client Logos:** Transparent PNGs or SVGs of fake company logos for the "Trusted By" banner.
+- [ ] **3x Service Icons:** Clean, minimalist icons (e.g., target, gear, growth chart) for the core services.
+- [ ] **1x Professional Headshot:** High-quality portrait of a business executive for the "About the Consultant" section.
+- [ ] **2-3x Avatar Photos:** Small portrait pictures of people to use next to the fake testimonials.
