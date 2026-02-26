@@ -71,7 +71,7 @@ The typography pairs a bold, authoritative Serif font for headings with a highly
 
 ### 🖼️ Required Media Assets
 
-- [ ] **1x Hero Background Image:** High-quality photo of a modern office, boardroom, or corporate setting.
+- [X] **1x Hero Background Image:** High-quality photo of a modern office, boardroom, or corporate setting.
 - [ ] **4-5x Client Logos:** Transparent PNGs or SVGs of fake company logos for the "Trusted By" banner.
 - [ ] **3x Service Icons:** Clean, minimalist icons (e.g., target, gear, growth chart) for the core services.
 - [ ] **1x Professional Headshot:** High-quality portrait of a business executive for the "About the Consultant" section.
