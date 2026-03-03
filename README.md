@@ -10,7 +10,7 @@ I'm building a website for Consultation website for those who provide Consultati
 - [X] Finalize Demo Name : GrowthMatrix
 - [X] Lock in Color Palette : Charcoal & Gold
 - [X] Select Fonts (Bold Serif for headings, clean Sans-Serif for body text).
-- [ ] Gather high-quality stock images and placeholder company logos.
+- [X] Gather high-quality stock images and placeholder company logos.
 
 ### Phase 2: Copywriting & Content 
 - [ ] **Hero Section:** Draft a punchy headline, subheadline, and Call-to-Action (CTA).
