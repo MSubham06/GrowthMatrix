@@ -14,7 +14,7 @@ I'm building a website for Consultation website for those who provide Consultati
 
 ### Phase 2: Copywriting & Content 
 - [X] **Hero Section:** Draft a punchy headline, subheadline, and Call-to-Action (CTA).
-- [ ] **Pain Points:** Define 3 common business problems to agitate.
+- [X] **Pain Points:** Define 3 common business problems to agitate.
 - [ ] **Services:** Outline 3 core consulting services with short descriptions.
 - [ ] **The Process:** Create a simple 3-step framework timeline.
 - [ ] **Testimonials:** Draft 2-3 realistic dummy reviews with success metrics.
