@@ -1,10 +1,12 @@
+import { ArrowRight, PlayCircle } from 'lucide-react'
+import { TrendingUp, Users, Building2, Clock } from 'lucide-react'
 import './Hero.css'
 
 const STATS = [
-  { value: '$240M+', label: 'Revenue Generated' },
-  { value: '93%',    label: 'Client Retention'  },
-  { value: '180+',   label: 'Companies Scaled'  },
-  { value: '12 Yrs', label: 'In Practice'        },
+  { icon: TrendingUp, value: '$240M+', label: 'Revenue Generated' },
+  { icon: Users,      value: '93%',    label: 'Client Retention'  },
+  { icon: Building2,  value: '180+',   label: 'Companies Scaled'  },
+  { icon: Clock,      value: '12 Yrs', label: 'In Practice'        },
 ]
 
 export default function Hero() {
@@ -13,8 +15,6 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
-
-      {/* Left — copy */}
       <div className="hero-copy">
         <span className="section-tag">Elite Business Consulting</span>
 
@@ -31,38 +31,38 @@ export default function Hero() {
 
         <div className="hero-ctas">
           <button className="btn-primary" onClick={() => scrollTo('contact')}>
-            Book a Free Strategy Call
+            Book a Free Strategy Call <ArrowRight size={16} />
           </button>
           <button className="btn-outline" onClick={() => scrollTo('services')}>
-            Explore Services
+            <PlayCircle size={16} /> See Our Work
           </button>
         </div>
       </div>
 
-      {/* Right — dark stats card */}
+      {/* Dark stats card */}
       <div className="hero-card">
         <div className="hero-card-header">
           <span className="card-label">Total Impact</span>
           <span className="card-dot" />
         </div>
+
         <p className="card-big-num">$240M+</p>
         <p className="card-big-label">Revenue generated for clients</p>
 
         <div className="card-divider" />
 
         <div className="card-stats-grid">
-          {STATS.slice(1).map(({ value, label }) => (
+          {STATS.slice(1).map(({ icon: Icon, value, label }) => (
             <div className="card-stat" key={label}>
+              <Icon size={16} className="card-stat-icon" />
               <span className="card-stat-val">{value}</span>
               <span className="card-stat-label">{label}</span>
             </div>
           ))}
         </div>
 
-        {/* Decorative lime glow */}
         <div className="card-glow" aria-hidden="true" />
       </div>
-
     </section>
   )
 }

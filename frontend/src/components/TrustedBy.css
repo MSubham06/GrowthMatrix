@@ -1,0 +1,40 @@
+.trusted-by {
+  background: var(--bg-secondary);
+  padding: 44px 6%;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.trusted-label {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 1.75rem;
+}
+.logos-row {
+  display: flex; justify-content: center;
+  align-items: center; gap: 3rem; flex-wrap: wrap;
+}
+.logo-item {
+  display: flex; align-items: center; gap: 8px;
+  cursor: default; transition: opacity 0.2s;
+  opacity: 0.35;
+}
+.logo-item:hover { opacity: 0.75; }
+.logo-short {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem; font-weight: 800;
+  color: var(--accent);
+}
+.logo-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem; font-weight: 700;
+  color: var(--text-body);
+  letter-spacing: -0.02em;
+}
+@media (max-width: 600px) { .logos-row { gap: 1.5rem; } }

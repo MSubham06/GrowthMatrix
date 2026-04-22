@@ -1,3 +1,4 @@
+import { CheckCircle2 } from 'lucide-react'
 import useInView from '../hooks/useInView'
 import './About.css'
 
@@ -11,13 +12,22 @@ const PERKS = [
 export default function About() {
   const lRef = useInView()
   const rRef = useInView()
+
   return (
     <section className="about-section" id="about">
       <div className="about-grid">
+
+        {/* Image col — uses Founder.jpeg from Brand Assets */}
         <div ref={lRef} className="about-img-col reveal">
           <div className="about-img-box">
-            <img src="/Brand Assets/Founder.jpeg" alt="Founder" onError={e => e.target.style.display='none'} />
-            <div className="about-fallback">👔</div>
+            <img
+              src="/Brand Assets/Founder.jpeg"
+              alt="GrowthMatrix Founder"
+              onError={e => { e.target.style.display = 'none' }}
+            />
+            <div className="about-img-placeholder">
+              <span>Founder Photo</span>
+            </div>
           </div>
           <div className="about-badge">
             <span className="badge-val">12+</span>
@@ -25,6 +35,8 @@ export default function About() {
           </div>
           <div className="about-decor" />
         </div>
+
+        {/* Text col */}
         <div ref={rRef} className="about-copy reveal" style={{ transitionDelay: '0.15s' }}>
           <span className="section-tag">About the Firm</span>
           <h2 className="section-title" style={{ marginBottom: '1.2rem', marginTop: '0.4rem' }}>
@@ -38,12 +50,19 @@ export default function About() {
           <ul className="perks-list">
             {PERKS.map(p => (
               <li key={p} className="perk-item">
-                <span className="perk-check">✓</span>
+                <CheckCircle2 size={18} className="perk-icon" />
                 <p>{p}</p>
               </li>
             ))}
           </ul>
+          <button
+            className="btn-primary about-cta"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Work With Us
+          </button>
         </div>
+
       </div>
     </section>
   )

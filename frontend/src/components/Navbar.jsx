@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Menu, X } from 'lucide-react'
 import './Navbar.css'
 
 const LINKS = ['Services', 'Process', 'About', 'Testimonials']
@@ -25,7 +26,6 @@ export default function Navbar() {
           Growth<span>Matrix</span>
         </div>
 
-        {/* Desktop links */}
         <ul className="nav-links">
           {LINKS.map(link => (
             <li key={link}>
@@ -34,27 +34,24 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
-        <button className="btn-primary nav-cta" onClick={() => scrollTo('contact')}>
+        <button className="nav-cta" onClick={() => scrollTo('contact')}>
           Book a Call
         </button>
 
-        {/* Mobile hamburger */}
         <button
-          className={`hamburger${menuOpen ? ' open' : ''}`}
+          className="hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
         >
-          <span /><span /><span />
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
 
-      {/* Mobile dropdown */}
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`}>
         {LINKS.map(link => (
           <button key={link} onClick={() => scrollTo(link)}>{link}</button>
         ))}
-        <button className="btn-primary mobile-cta" onClick={() => scrollTo('contact')}>
+        <button className="mobile-cta" onClick={() => scrollTo('contact')}>
           Book a Call
         </button>
       </div>

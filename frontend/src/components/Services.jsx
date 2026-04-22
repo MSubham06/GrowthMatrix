@@ -1,21 +1,42 @@
+import { BarChart3, Workflow, BrainCircuit, ArrowRight } from 'lucide-react'
 import useInView from '../hooks/useInView'
 import './Services.css'
 
 const SERVICES = [
-  { icon: '📈', title: 'Revenue Growth Strategy', text: 'We audit your revenue streams and identify untapped growth levers. From pricing optimization to new market entry, we build a roadmap that adds zeros.' },
-  { icon: '⚙️', title: 'Operational Efficiency', text: 'Bloated processes kill margins. We map your operations end-to-end, eliminate waste, and build lean systems that scale without proportional cost increases.' },
-  { icon: '🎯', title: 'Executive Leadership Coaching', text: 'High-performance teams start with sharp leaders. Our 1:1 coaching equips executives with the mindset and frameworks that define market leaders.' },
+  {
+    icon: BarChart3,
+    title: 'Revenue Growth Strategy',
+    text: 'We audit your revenue streams and identify untapped growth levers. From pricing optimization to new market entry, we build a roadmap that adds zeros.',
+    tag: 'Most Popular',
+  },
+  {
+    icon: Workflow,
+    title: 'Operational Efficiency',
+    text: 'Bloated processes kill margins. We map your operations end-to-end, eliminate waste, and build lean systems that scale without proportional cost increases.',
+    tag: null,
+  },
+  {
+    icon: BrainCircuit,
+    title: 'Executive Leadership Coaching',
+    text: 'High-performance teams start with sharp leaders. Our 1:1 coaching equips executives with the mindset and frameworks that define market leaders.',
+    tag: null,
+  },
 ]
 
-function ServiceCard({ icon, title, text, delay }) {
+function ServiceCard({ icon: Icon, title, text, tag, delay }) {
   const ref = useInView()
-  const scrollTo = () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
   return (
     <div ref={ref} className="srv-card reveal" style={{ transitionDelay: `${delay}s` }}>
-      <div className="srv-icon">{icon}</div>
+      {tag && <span className="srv-tag">{tag}</span>}
+      <div className="srv-icon"><Icon size={22} /></div>
       <h3 className="srv-title">{title}</h3>
       <p className="srv-text">{text}</p>
-      <button className="srv-link" onClick={scrollTo}>Get Started →</button>
+      <button
+        className="srv-link"
+        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+      >
+        Get Started <ArrowRight size={14} />
+      </button>
     </div>
   )
 }

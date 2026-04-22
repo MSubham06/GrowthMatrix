@@ -1,0 +1,51 @@
+.pain-section { padding: 110px 6%; background: var(--bg-primary); }
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.pain-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  border-top: 2px solid transparent;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s, opacity 0.6s;
+  cursor: default;
+}
+.pain-card:hover {
+  border-top-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+.pain-card-top {
+  display: flex; align-items: center;
+  justify-content: space-between; margin-bottom: 1.5rem;
+}
+.pain-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.8rem; font-weight: 800;
+  color: rgba(255,255,255,0.05);
+  line-height: 1; letter-spacing: -0.03em;
+}
+.pain-icon {
+  width: 44px; height: 44px;
+  background: var(--accent-tint);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+}
+.pain-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 0.75rem;
+}
+.pain-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem; color: var(--text-body); line-height: 1.78;
+}
+@media (max-width: 860px) {
+  .pain-grid { grid-template-columns: 1fr; }
+  .pain-section { padding: 72px 5%; }
+}
