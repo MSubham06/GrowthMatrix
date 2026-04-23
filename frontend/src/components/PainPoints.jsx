@@ -1,11 +1,11 @@
-import { TrendingDown, Cog, UserMinus } from 'lucide-react'
+import { TrendingDown, Settings, UserX } from './Icons'
 import useInView from '../hooks/useInView'
 import './PainPoints.css'
 
 const PAINS = [
-  { num: '01', icon: TrendingDown, title: 'Revenue Plateaus',   text: "You've hit a ceiling and can't pinpoint why. The strategies that got you here won't get you to the next level — and you know it." },
-  { num: '02', icon: Cog,          title: 'Operational Chaos',  text: 'Your team is busy but results are inconsistent. Poor systems and undefined processes are quietly draining your margins every quarter.' },
-  { num: '03', icon: UserMinus,    title: 'Leadership Gaps',    text: "Decisions slow down when you're not in the room. Your business is too dependent on you, and you have no succession clarity." },
+  { num: '01', icon: TrendingDown, title: 'Revenue Plateaus',  text: "You've hit a ceiling and can't pinpoint why. The strategies that got you here won't get you to the next level — and you know it." },
+  { num: '02', icon: Settings,     title: 'Operational Chaos', text: 'Your team is busy but results are inconsistent. Poor systems and undefined processes are quietly draining your margins every quarter.' },
+  { num: '03', icon: UserX,        title: 'Leadership Gaps',   text: "Decisions slow down when you're not in the room. Your business is too dependent on you, and you have no succession clarity." },
 ]
 
 function PainCard({ num, icon: Icon, title, text, delay }) {

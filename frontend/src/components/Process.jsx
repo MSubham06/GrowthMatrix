@@ -1,4 +1,4 @@
-import { Phone, FileText, Rocket } from 'lucide-react'
+import { Phone, FileText, Rocket } from './Icons'
 import useInView from '../hooks/useInView'
 import './Process.css'
 
@@ -13,9 +13,7 @@ function Step({ num, icon: Icon, title, text, delay, isLast }) {
   return (
     <div ref={ref} className="process-step reveal" style={{ transitionDelay: `${delay}s` }}>
       <div className="step-header">
-        <div className="step-badge">
-          <Icon size={18} />
-        </div>
+        <div className="step-badge"><Icon size={18} /></div>
         <span className="step-num">{num}</span>
       </div>
       <h3 className="step-title">{title}</h3>
