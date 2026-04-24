@@ -14,31 +14,31 @@ A premium consulting landing page — demo website to showcase web development s
 - [x] Gather brand assets (logos, headshots, images)
 
 ### Phase 2: Copywriting & Content
-- [ ] **Hero Section:** Punchy headline, subheadline, dual CTA
-- [ ] **Pain Points:** 3 business problems with agitation copy
-- [ ] **Services:** 3 core consulting services with descriptions
-- [ ] **Process:** 3-step framework with visuals
-- [ ] **Testimonials:** 3 dummy reviews with success metrics
-- [ ] **About:** Founder bio + firm credibility copy
-- [ ] **Contact:** Form copy + booking CTA
+- [X] **Hero Section:** Punchy headline, subheadline, dual CTA
+- [X] **Pain Points:** 3 business problems with agitation copy
+- [X] **Services:** 3 core consulting services with descriptions
+- [X] **Process:** 3-step framework with visuals
+- [X] **Testimonials:** 3 dummy reviews with success metrics
+- [X] **About:** Founder bio + firm credibility copy
+- [X] **Contact:** Form copy + booking CTA
 
 ### Phase 3: Project Setup & Architecture
-- [ ] Initialize React + Vite frontend
-- [ ] Configure CSS variables and global styles
-- [ ] Set up folder structure (components, hooks, styles)
-- [ ] Install dependencies (framer-motion, lucide-react)
+- [X] Initialize React + Vite frontend
+- [X] Configure CSS variables and global styles
+- [X] Set up folder structure (components, hooks, styles)
+- [X] Install dependencies (framer-motion, lucide-react)
 
 ### Phase 4: Component Development
-- [ ] `Navbar.jsx` — Logo, links, sticky scroll effect, mobile menu
-- [ ] `Hero.jsx` — Headline, subtext, dual CTA, floating UI card
-- [ ] `TrustedBy.jsx` — Partner logos / social proof bar
-- [ ] `PainPoints.jsx` — 3 problem cards with hover effects
-- [ ] `Services.jsx` — 3 service cards with animated accent
-- [ ] `Process.jsx` — 3-step dark section with connectors
-- [ ] `Testimonials.jsx` — Review cards with metrics badges
-- [ ] `About.jsx` — Split layout with founder image + perks
-- [ ] `Contact.jsx` — Form + booking details
-- [ ] `Footer.jsx` — 4-column grid + copyright
+- [X] `Navbar.jsx` — Logo, links, sticky scroll effect, mobile menu
+- [X] `Hero.jsx` — Headline, subtext, dual CTA, floating UI card
+- [X] `TrustedBy.jsx` — Partner logos / social proof bar
+- [X] `PainPoints.jsx` — 3 problem cards with hover effects
+- [X] `Services.jsx` — 3 service cards with animated accent
+- [X] `Process.jsx` — 3-step dark section with connectors
+- [X] `Testimonials.jsx` — Review cards with metrics badges
+- [X] `About.jsx` — Split layout with founder image + perks
+- [X] `Contact.jsx` — Form + booking details
+- [X] `Footer.jsx` — 4-column grid + copyright
 
 ### Phase 5: Polish & Deploy
 - [ ] Scroll reveal animations on all sections
