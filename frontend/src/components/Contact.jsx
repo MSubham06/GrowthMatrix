@@ -12,9 +12,45 @@ const SERVICES = [
 
 const DETAILS = [
   { icon: Mail,  label: 'Email Us',     val: 'contactus@growthmatrix.co'   },
-  { icon: Phone, label: 'Call Us',       val: '+91 99332 21100'       },
+  { icon: Phone, label: 'Call Us',       val: '+91 99332 89634'       },
   { icon: Clock, label: 'Response Time', val: 'Within 4 business hours' },
 ]
+
+
+function SearchIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+  )
+}
+function UserCheckIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <polyline points="16 11 18 13 22 9"/>
+    </svg>
+  )
+}
+function CalendarIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/>
+      <line x1="8" y1="2" x2="8" y2="6"/>
+      <line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+  )
+}
+function BadgeCheckIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      <polyline points="9 12 11 14 15 10"/>
+    </svg>
+  )
+}
 
 /* ── Gamified success popup ── */
 function SuccessPopup({ onClose }) {
@@ -22,14 +58,13 @@ function SuccessPopup({ onClose }) {
   const [step,  setStep]  = useState(0)
 
   const steps = [
-    { icon: '🔍', label: 'Analyzing your request...' },
-    { icon: '📋', label: 'Assigning a strategist...' },
-    { icon: '📅', label: 'Booking your slot...'      },
-    { icon: '✅', label: 'Confirmed!'                },
+    { icon: <SearchIcon />,    label: 'Analyzing your request...' },
+    { icon: <UserCheckIcon />, label: 'Assigning a strategist...' },
+    { icon: <CalendarIcon />,  label: 'Booking your slot...'      },
+    { icon: <BadgeCheckIcon />,label: 'Confirmed!'                },
   ]
 
   useEffect(() => {
-    /* Count up 0 → 100 */
     const interval = setInterval(() => {
       setCount(c => {
         if (c >= 100) { clearInterval(interval); return 100 }
@@ -40,7 +75,6 @@ function SuccessPopup({ onClose }) {
   }, [])
 
   useEffect(() => {
-    /* Advance steps every 600ms */
     if (step >= steps.length - 1) return
     const t = setTimeout(() => setStep(s => s + 1), 700 * (step + 1))
     return () => clearTimeout(t)
@@ -50,7 +84,6 @@ function SuccessPopup({ onClose }) {
     <div className="success-overlay" onClick={onClose}>
       <div className="success-popup" onClick={e => e.stopPropagation()}>
 
-        {/* Progress ring */}
         <div className="success-ring-wrap">
           <svg className="success-ring" viewBox="0 0 120 120">
             <circle cx="60" cy="60" r="50" className="ring-track" />
@@ -67,11 +100,10 @@ function SuccessPopup({ onClose }) {
           </div>
         </div>
 
-        {/* Steps */}
         <ul className="success-steps">
           {steps.map((s, i) => (
             <li key={i} className={`success-step ${i <= step ? 'done' : ''} ${i === step ? 'active' : ''}`}>
-              <span className="step-tick">{i < step ? '✓' : i === step ? '→' : '○'}</span>
+              <span className="step-tick-icon">{s.icon}</span>
               <span>{s.label}</span>
             </li>
           ))}
@@ -83,7 +115,7 @@ function SuccessPopup({ onClose }) {
             <p>We'll reach out within <strong>4 hours</strong> to confirm your free strategy call.</p>
             <p className="success-email">Check your inbox at the email you provided.</p>
             <button className="btn-primary success-close" onClick={onClose}>
-              Got it — let's go!
+              Got it let's go!
             </button>
           </div>
         )}
@@ -112,13 +144,16 @@ export default function Contact() {
           </h2>
           <p className="section-sub" style={{ maxWidth:'100%' }}>
             In 60 minutes, we'll audit your biggest bottleneck and hand you
-            a concrete action plan — zero cost, zero obligation.
+            a concrete action plan. zero cost, zero obligation.
           </p>
           <div className="contact-details">
             {DETAILS.map(({ icon: Icon, label, val }) => (
               <div key={label} className="contact-detail">
                 <div className="detail-icon"><Icon size={18} /></div>
-                <div><p className="detail-label">{label}</p><p className="detail-val">{val}</p></div>
+                <div>
+                  <p className="detail-label">{label}</p>
+                  <p className="detail-val">{val}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -160,7 +195,6 @@ export default function Contact() {
 
       </div>
 
-      {/* Gamified popup overlay */}
       {submitted && <SuccessPopup onClose={() => setSubmitted(false)} />}
     </section>
   )

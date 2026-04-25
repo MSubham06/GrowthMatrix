@@ -1,40 +1,57 @@
 .trusted-by {
   background: var(--bg-secondary);
-  padding: 44px 6%;
+  padding: 52px var(--section-h);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
+
 .trusted-label {
   text-align: center;
   font-family: 'Inter', sans-serif;
-  font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--text-muted); margin-bottom: 1.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
 }
+
 .logos-row {
-  display: flex; justify-content: center;
-  align-items: center; gap: 3rem; flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
 }
+
 .logo-item {
-  display: flex; align-items: center; gap: 8px;
-  cursor: default; transition: opacity 0.2s;
-  opacity: 0.35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+  /* All logos desaturated + dimmed by default */
+  filter: grayscale(100%) brightness(0) invert(1);
+  opacity: 0.25;
 }
-.logo-item:hover { opacity: 0.75; }
-.logo-short {
-  display: flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.7rem; font-weight: 800;
-  color: var(--accent);
+
+.logo-item:hover {
+  opacity: 0.75;
+  filter: grayscale(100%) brightness(0) invert(1);
 }
-.logo-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.95rem; font-weight: 700;
-  color: var(--text-body);
-  letter-spacing: -0.02em;
+
+.logo-img {
+  height: 28px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  display: block;
 }
-@media (max-width: 600px) { .logos-row { gap: 1.5rem; } }
+
+@media (max-width: 768px) {
+  .logos-row { gap: 2.5rem; }
+  .logo-img  { height: 22px; }
+}
+
+@media (max-width: 480px) {
+  .logos-row { gap: 1.75rem; }
+}

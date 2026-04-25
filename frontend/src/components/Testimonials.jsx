@@ -17,7 +17,7 @@ const TESTIMONIALS = [
     color: '#84CC16',
   },
   {
-    quote: "I was skeptical of consultants — all talk, no action. These guys embedded into our operations and the efficiency gains paid for the engagement in 6 weeks.",
+    quote: "I was skeptical of consultants all talk, no action. These guys embedded into our operations and the efficiency gains paid for the engagement in 6 weeks.",
     metric: '↓ 38% Operational Costs',
     name: 'Priya Sharma',
     role: 'COO, NexPath Technologies',
@@ -79,7 +79,7 @@ export default function Testimonials() {
       <div ref={hRef} className="section-header center reveal">
         <span className="section-tag">Client Results</span>
         <h2 className="section-title">The Proof Is In the Numbers</h2>
-        <p className="section-sub">Real results from real clients. No cherry-picking, no vanity metrics.</p>
+        <p className="section-sub">Real results from real clients. No cherry picking, no vanity metrics.</p>
       </div>
       <div className="testi-grid">
         {TESTIMONIALS.map((t, i) => (

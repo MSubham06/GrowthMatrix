@@ -35,7 +35,7 @@ export default function About() {
           <p className="about-body">
             GrowthMatrix was founded on a single conviction: consultants should be measured
             by outcomes, not deliverables. We've worked in the trenches of 180+ companies
-            across sectors — our only metric is your result.
+            across sectors, our only metric is your result.
           </p>
           <ul className="perks-list">
             {PERKS.map(p => (

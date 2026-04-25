@@ -145,7 +145,7 @@
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
 }
-.ring-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 2px; }
+.ring-icon { display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: 4px; }
 .ring-pct {
   font-family: 'Syne', sans-serif;
   font-size: 0.85rem; font-weight: 800;
@@ -215,3 +215,16 @@
   .contact-wrap { grid-template-columns: 1fr; gap: 3rem; }
   .form-row { grid-template-columns: 1fr; }
 }
+
+/* SVG icon inside step rows */
+.step-tick-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--text-muted);
+}
+.success-step.done .step-tick-icon  { color: var(--text-primary); }
+.success-step.active .step-tick-icon { color: var(--accent); }
