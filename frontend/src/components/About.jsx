@@ -17,7 +17,7 @@ export default function About() {
       <div className="about-grid">
         <div ref={lRef} className="about-img-col reveal">
           <div className="about-img-box">
-            <img src="/Brand Assets/Founder.jpeg" alt="GrowthMatrix Founder"
+            <img src="src\assets\Founder.jpeg" alt="GrowthMatrix Founder"
               onError={e => { e.target.style.display = 'none' }} />
             <div className="about-img-placeholder"><span>Founder Photo</span></div>
           </div>

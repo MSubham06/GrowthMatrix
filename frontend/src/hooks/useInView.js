@@ -1,13 +1,9 @@
 import { useEffect, useRef } from 'react'
 
 /**
- * useInView
- * Adds "visible" class when the element scrolls into view.
- * Pair with className="reveal" in your JSX.
- *
- * Usage:
- *   const ref = useInView()
- *   <div ref={ref} className="reveal"> ... </div>
+ * useInView(threshold?)
+ * Adds "visible" class when element scrolls into viewport.
+ * Works with: .reveal  .reveal-left  .reveal-right  .reveal-scale
  */
 export default function useInView(threshold = 0.12) {
   const ref = useRef(null)
@@ -15,6 +11,11 @@ export default function useInView(threshold = 0.12) {
   useEffect(() => {
     const el = ref.current
     if (!el) return
+
+    if (!window.IntersectionObserver) {
+      el.classList.add('visible')
+      return
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {

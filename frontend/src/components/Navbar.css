@@ -10,9 +10,10 @@
 }
 .navbar.scrolled {
   height: 62px;
-  background: rgba(10, 10, 10, 0.97);
-  border-bottom-color: rgba(255,255,255,0.08);
+  background: rgba(10,10,10,0.97);
 }
+
+/* Logo */
 .nav-logo {
   font-family: 'Syne', sans-serif;
   font-size: 1.35rem; font-weight: 800;
@@ -20,29 +21,43 @@
   cursor: pointer; user-select: none; flex-shrink: 0;
 }
 .nav-logo span { color: #84CC16; }
+
+/* Desktop links — NOW IN SYNE FONT */
 .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
 .nav-links button {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem; font-weight: 500;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.88rem; font-weight: 700;
   color: #A3A3A3; background: none; border: none;
-  cursor: pointer; padding: 0; transition: color 0.2s;
+  cursor: pointer; padding: 0;
+  letter-spacing: -0.01em;
+  transition: color 0.2s;
 }
 .nav-links button:hover { color: #F5F5F5; }
+
+/* CTA */
 .nav-cta {
-  padding: 9px 20px;
+  padding: 10px 22px;
   background: #84CC16; color: #000;
   border: none; border-radius: 6px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.835rem; font-weight: 700;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.875rem; font-weight: 800;
   cursor: pointer; flex-shrink: 0;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
-.nav-cta:hover { background: #A3E635; transform: translateY(-1px); }
+.nav-cta:hover {
+  background: #A3E635;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(132,204,22,0.35);
+}
+
+/* Hamburger */
 .hamburger {
   display: none; align-items: center; justify-content: center;
   background: none; border: none; cursor: pointer;
   color: #F5F5F5; padding: 4px;
 }
+
+/* Mobile menu */
 .mobile-menu {
   display: none; position: fixed;
   top: 62px; left: 0; right: 0; z-index: 998;
@@ -53,8 +68,8 @@
 }
 .mobile-menu.open { display: flex; }
 .mobile-menu button {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem; font-weight: 500;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem; font-weight: 700;
   color: #A3A3A3; background: none; border: none;
   border-bottom: 1px solid rgba(255,255,255,0.06);
   cursor: pointer; text-align: left;
@@ -65,9 +80,10 @@
   margin-top: 1rem !important;
   background: #84CC16 !important; color: #000 !important;
   border-radius: 6px !important; border-bottom: none !important;
-  text-align: center !important; font-weight: 700 !important;
+  text-align: center !important; font-weight: 800 !important;
   padding: 13px !important;
 }
+
 @media (max-width: 860px) {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
