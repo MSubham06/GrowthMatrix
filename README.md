@@ -1,4 +1,4 @@
-# GrowthMatrix
+# GrowthMatrix - Not Completed 
 
 A premium consulting landing page — demo website to showcase web development services to potential clients. Built with React + Vite, featuring a modern, clean aesthetic with bold typography and sharp accent colors.
 
