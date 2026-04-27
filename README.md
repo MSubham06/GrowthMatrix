@@ -41,7 +41,7 @@ A premium consulting landing page — demo website to showcase web development s
 - [X] `Footer.jsx` — 4-column grid + copyright
 
 ### Phase 5: Polish & Deploy
-- [ ] Scroll reveal animations on all sections
+- [X] Scroll reveal animations on all sections
 - [ ] Full mobile responsiveness (320px → 1440px)
 - [ ] Image optimization
 - [ ] Deploy to Vercel / Netlify
