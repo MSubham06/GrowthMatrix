@@ -255,21 +255,6 @@ npm run preview
 | `framer-motion` | ^11 | Scroll animations |
 | `lucide-react` | ^0.383 | Icon library |
 
----
-
-## 🌐 Deployment
-
-Recommended: **Vercel** (zero config with Vite)
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy from /frontend
-vercel --prod
-```
-
-Or connect the GitHub repo directly on **vercel.com** → auto-deploys on every push to `main`.
 
 ---
 
